@@ -1,96 +1,80 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Brick Breaker</title>
-    <style>
-     * { padding: 0; margin: 0; }
-     canvas { background: #eee; display: block; margin: 0 auto; }
-    </style>
-     <link href="css/brick-breaker-styles.css" rel="stylesheet" type="text/css" />
-     <script defer src="js/brick-breaker.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <script defer src="js/connect-four.js"></script>
+    <link href="css/connect-four-styles.css" rel="stylesheet" type="text/css" />
+    <title>Connect Four</title>
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
       <a href="tic-tac-toe.html">Tic Tac Toe</a>
        <a href="brick-breaker.html">Brick Breaker</a>
        <a href="connect-four.html">Connect Four</a>
     </div>
+  </head>
+  <body>
 
-</head>
-<body>
-   <body>
-      <div class="header">
-         <a href="index.html">Home</a>
-         <a href="tictactoe.html">Tic Tac Toe</a>
-         <a class="active" href="connectFour.html">Connect Four</a>
-         <a href="brickBreaker.html">Brick Breaker</a>
-      </div>
       <h1>Connect Four</h1>
-      <h3> Select First Player </h3>
-      <button id="firstRed"> Red </button>
-      <button id="firstYellow"> Yellow </button>
-      <h2 id="change"> Turn: Red </h2>
-      <h3 class="player-turn"></h3>
-      <div class="container column" id="check">
-         <h3 id="redScore">
-            Red Score
-            <li id="firstList"></li>
-         </h3>
-         <h3 id="yellowScore">
-            Yellow Score
-            <li id="secondList"></li>
-         </h3>
-         <h3 id="tieScore">
-            Tie Score
-            <li id="thirdList"></li>
-         </h3>
-         <div class="container wrap" id="board">
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-            <div class="squares" id="check2"></div>
-            <div class="squares"  id="check2"></div>
-         </div>
+
+        <h3>Who Should Go First?</h3>
+        <div class="containerv2 columnv2">
+
+
+        <div class="containerv2">
+          <div class="first" id="redFirst"></div>
+          <div class="first" id="yellowFirst"></div>
+        </div>
+
+      <h2 id="turn">turn: Red</h2>
       </div>
-      <button id="reset-button">Play Again!</button>
-   </body>
+
+     <div class="container column">
+      <div class="wrap container" id="board">
+        <div class="dot" id="dot0"></div>
+        <div class="dot" id="dot1"></div>
+        <div class="dot" id="dot2"></div>
+        <div class="dot" id="dot3"></div>
+        <div class="dot" id="dot4"></div>
+        <div class="dot" id="dot5"></div>
+        <div class="dot" id="dot6"></div>
+        <div class="dot" id="dot7"></div>
+        <div class="dot" id="dot8"></div>
+        <div class="dot" id="dot9"></div>
+        <div class="dot" id="dot10"></div>
+        <div class="dot" id="dot11"></div>
+        <div class="dot" id="dot12"></div>
+        <div class="dot" id="dot13"></div>
+        <div class="dot" id="dot14"></div>
+        <div class="dot" id="dot15"></div>
+        <div class="dot" id="dot16"></div>
+        <div class="dot" id="dot17"></div>
+        <div class="dot" id="dot18"></div>
+        <div class="dot" id="dot19"></div>
+        <div class="dot" id="dot20"></div>
+        <div class="dot" id="dot21"></div>
+        <div class="dot" id="dot22"></div>
+        <div class="dot" id="dot23"></div>
+        <div class="dot" id="dot24"></div>
+        <div class="dot" id="dot25"></div>
+        <div class="dot" id="dot26"></div>
+        <div class="dot" id="dot27"></div>
+        <div class="dot" id="dot28"></div>
+        <div class="dot" id="dot29"></div>
+        <div class="dot" id="dot30"></div>
+        <div class="dot" id="dot31"></div>
+        <div class="dot" id="dot32"></div>
+        <div class="dot" id="dot33"></div>
+        <div class="dot" id="dot34"></div>
+        <div class="dot" id="dot35"></div>
+        <div class="dot" id="dot36"></div>
+        <div class="dot" id="dot37"></div>
+        <div class="dot" id="dot38"></div>
+        <div class="dot" id="dot39"></div>
+        <div class="dot" id="dot40"></div>
+        <div class="dot" id="dot41"></div>
+      </div>
+
+      <div id="reset-button">Play Again!</div>
+    </div>
+  </body>
 </html>
