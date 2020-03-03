@@ -192,3 +192,95 @@ if (board[index] === "") {
       return false;
     }
    }
+
+   turn = turn === "Red" ? "Yellow" : "Red";
+     win = getWinner();
+     if (win === "T") {
+       ties++;
+       document.getElementById("tie_score").innerHTML = ties;
+     }
+
+     render();
+   }
+   }
+
+
+   function getWinner() {
+     let winner = null;
+
+     winningConditions.forEach(function(condition, index) {
+       if (
+         board[condition[0]] &&
+         board[condition[0]] === board[condition[1]] &&
+         board[condition[1]] === board[condition[2]] &&
+         board[condition[2]] === board[condition[3]]
+       ) {
+         winner = board[condition[0]];
+         if (winner === "Red") {
+           red_wins++;
+           document.getElementById("red_score").innerHTML = red_wins;
+
+         }
+         else if (winner === "Yellow") {
+           yellow_wins++;
+           document.getElementById("yellow_score").innerHTML = yellow_wins;
+
+         }
+
+       }
+
+     });
+
+     return winner ? winner : board.includes("") ? null : "T";
+   }
+
+   function playAgain() {
+     board.forEach(function(mark, index) {
+       if (circle[index].classList.contains("Red")) {
+         circle[index].classList.remove("Red")
+       }
+       if (circle[index].classList.contains("Yellow")) {
+         circle[index].classList.remove("Yellow")
+       }
+     });
+     init()
+   }
+
+   function resetScoreboard() {
+     red_wins = 0;
+     yellow_wins = 0;
+     ties = 0;
+
+     document.getElementById("red_score").innerHTML = red_wins;
+     document.getElementById("tie_score").innerHTML = ties;
+     document.getElementById("yellow_score").innerHTML = yellow_wins;
+   }
+
+   function redFirst(){
+     init();
+
+     document.getElementById("switch").innerHTML = "Turn: Red";
+     turn = "Red";
+     first = "Red"
+
+
+   }
+
+   function yellowFirst(){
+     init();
+
+     document.getElementById("switch").innerHTML = "Turn: Yellow";
+     turn = "Yellow";
+     first = "Yellow"
+
+   }
+
+   function resetScoreboard() {
+       red_wins = 0;
+       yellow_wins = 0;
+       ties = 0;
+
+       document.getElementById("red_score").innerHTML = red_wins;
+       document.getElementById("tie_score").innerHTML = ties;
+       document.getElementById("yellow_score").innerHTML = yellow_wins;
+     }
