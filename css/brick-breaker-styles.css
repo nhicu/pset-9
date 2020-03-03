@@ -1,18 +1,18 @@
 body {
-  background-image: url(https://wallpaperaccess.com/full/866029.jpg);
+  text-align: center;
+  font-family: "Courier New", monospace;
+  background-image: url(https://cdn3.vectorstock.com/i/1000x1000/40/72/cute-fat-big-giraffe-vector-11074072.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
 }
 
-h1{
-  color: #FFFFFF;
-    margin: 0 auto;
-    font-family: "Courier New", monospace;
-    font-size: 90px;
-    margin: 2%;
+h1 {
+  margin: 0 auto;
+  font-family: "Courier New", monospace;
+  font-size: 50px;
+  margin: 2%;
+  color: black;
 }
-
 header{
 background: #FF8C00;
 }
