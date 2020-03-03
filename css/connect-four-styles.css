@@ -129,7 +129,7 @@ align-items: center;
 }
 
 #board {
-  background-color:#FFE3FF;
+  background-color:#E3FFFF;
   display: inline-block;
   vertical-align: middle;
   line-height: 123px;
@@ -146,7 +146,7 @@ border-radius: 20px;
 }
 
 #reset-button {
-  background-color: #AB1177;
+  background-color: #5D25EB;
   border: 10px solid white;
   color: white;
   font-size: 21px;
@@ -168,7 +168,7 @@ border-radius: 30%;
 #turn {
   color: black;
     margin: 0 auto;
-    font-family: "arcade", monospace;
+    font-family: "Courier New", monospace;
     font-size: 30px;
     margin: 2%;
 }
