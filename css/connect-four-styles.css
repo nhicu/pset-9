@@ -1,7 +1,7 @@
 body {
   text-align: center;
   font-family: "Courier New", monospace;
-  background-image: url(https://www.publicdomainpictures.net/pictures/260000/nahled/giraffe-wallpaper-pattern.jpg);
+  background-image: url(https://ih1.redbubble.net/image.51299259.8885/flat,1000x1000,075,f.u3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -39,14 +39,6 @@ background: #FF8C00;
   color: white;
 }
 
-h3{
-  color: #FFFFFF;
-    margin: 0 auto;
-    font-family: "Courier New", monospace;
-    font-size: 40px;
-    margin: 2%;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -61,7 +53,7 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -127,7 +119,7 @@ align-items: center;
   width: 110px;
   margin: 5%;
   border-radius: 50%;
-  color: white;
+  color: black;
 }
 
 .first:hover {
@@ -174,7 +166,7 @@ border-radius: 30%;
 }
 
 #turn {
-  color: #FFFFFF;
+  color: black;
     margin: 0 auto;
     font-family: "arcade", monospace;
     font-size: 30px;
