@@ -81,9 +81,11 @@ let yellow_wins = 0;
 let ties = 0;
 let first = "Red";
 let winner;
+
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const circle = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
+
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
@@ -91,3 +93,47 @@ document.getElementById("reset-button").onclick = init;
 document.getElementById("redFirst").onclick = redFirst;
 document.getElementById("yellowFirst").onclick = yellowFirst;
 document.getElementById("reset-scoreboard").onclick = resetScoreboard;
+
+///////////////////// FUNCTIONS /////////////////////////////////////
+
+function init() {
+  board = [
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+  ];
+
+  board.forEach(function(mark, index) {
+    if (circle[index].classList.contains("Red")) {
+      circle[index].classList.remove("Red")
+    }
+    if (circle[index].classList.contains("Yellow")) {
+      circle[index].classList.remove("Yellow")
+    }
+  });
+
+  turn = "Red"
+  win = null
+
+  if (first === "Red") {
+    turn = "Red"
+  }
+  else if (first === "Yellow") {
+    turn = "Yellow"
+  }
+
+  render();
+}
+
+
+function render() {
+  board.forEach(function(mark, index) {
+    circle[index].textContent = mark;
+  });
+
+  message.textContent =
+    win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
+}
