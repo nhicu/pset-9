@@ -14,10 +14,10 @@ h1{
 }
 
 header{
-background: #303030;
+background: #FF8C00;
 }
 .topnav {
-  background-color: #FF8C00;
+  background-color: #6495ED;
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@ background: #303030;
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 16px;
   text-decoration: none;
   font-size: 17px;
 }
