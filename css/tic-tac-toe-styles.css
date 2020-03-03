@@ -1,28 +1,4 @@
-body {
-  text-align: center;
-  font-family: "Courier New", monospace;
-  background-image: url(https://cdn3.vectorstock.com/i/1000x1000/40/72/cute-fat-big-giraffe-vector-11074072.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-h1 {
-  margin: 0 auto;
-  font-family: "Courier New", monospace;
-  font-size: 50px;
-  margin: 2%;
-  color: black;
-}
-
-h2 {
-  font-size: 25px;
-  font-weight: bold;
-  margin: 0.5%;
-  border-style: dotted;
-  padding: 10px;
-  background-color:#DEDBD7;
-  color: black;
-}
 
 .container {
   display: flex;
@@ -98,4 +74,29 @@ background: #FF8C00;
 .topnav a.active {
   background-color:#AF127B;
   color: white;
+}
+body {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  background-image: url(https://cdn3.vectorstock.com/i/1000x1000/40/72/cute-fat-big-giraffe-vector-11074072.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  margin: 0 auto;
+  font-family: "Courier New", monospace;
+  font-size: 50px;
+  margin: 2%;
+  color: black;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0.5%;
+  border-style: dotted;
+  padding: 10px;
+  background-color:#DEDBD7;
+  color: black;
 }
