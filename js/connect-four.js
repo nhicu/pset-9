@@ -137,3 +137,58 @@ function render() {
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
+
+function takeTurn(e) {
+
+ if (e.target.id == "board") {
+    return false;
+  }
+
+if (!win) {
+let index = circle.findIndex(function(circle) {
+  return circle === e.target;
+});
+
+
+let row1 = index % 7;
+
+if (board[index] === "") {
+
+  while (board[index + 7] === "") {
+    let i = index + 7;
+    document.getElementById("circle" + i + "").classList.add(turn);
+    board[i] = turn;
+    document.getElementById("circle" + index + "").classList.remove(turn);
+    board[index] = "";
+    index = i;
+
+  }
+  if (board[index] === "") {
+    document.getElementById("circle" + index + "").classList.add(turn);
+    board[index] = turn;
+
+  }
+
+  }
+  else if (board[index] !== "") {
+    if (board[row1] === "") {
+      while (board[row1 + 7] === "") {
+        let i = row1 + 7;
+        document.getElementById("circle" + i + "").classList.add(turn);
+        board[i] = turn;
+        document.getElementById("circle" + row1 + "").classList.remove(turn);
+        board[row1] = "";
+        row1 = i;
+
+      }
+      if (board[row1] === "") {
+        document.getElementById("circle" + row1 + "").classList.add(turn);
+        board[row1] = turn;
+
+      }
+
+    }
+    else if (board[row1] !== "") {
+      return false;
+    }
+   }
